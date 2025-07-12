@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Personality Quiz & Playlist Analyzer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Discover your music personality and analyze your playlists with this interactive website." />
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="logo">
+        <h1>MusicVibe</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-section="quiz">Quiz</a></li>
+        <li><a href="#" class="nav-link" data-section="playlist">Playlist Analyzer</a></li>
+        <li><a href="#" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <footer class="sidebar-footer">
+        <small>© 2025 MusicVibe</small>
+      </footer>
+    </nav>
+
+    <main class="main-content">
+      <!-- HOME -->
+      <section id="home" class="section active-section">
+        <div class="home-content">
+          <h2>What Does <span>Your Music</span> Say About You?</h2>
+          <p>Take our in-depth quiz and find out your unique music personality!</p>
+          <button id="startQuizBtn" class="btn-primary">Start Quiz</button>
+        </div>
+      </section>
+
+      <!-- QUIZ -->
+      <section id="quiz" class="section">
+        <h2>Music Personality Quiz</h2>
+        <div id="quiz-container">
+          <div id="progress-bar">
+            <div id="progress"></div>
+          </div>
+          <div id="question-container"></div>
+          <div class="quiz-nav-buttons">
+            <button id="prevBtn" class="btn-secondary" disabled>Previous</button>
+            <button id="nextBtn" class="btn-primary" disabled>Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLAYLIST ANALYZER -->
+      <section id="playlist" class="section">
+        <h2>Playlist Analyzer</h2>
+        <p>Paste your Spotify, YouTube, or Apple Music playlist URL below:</p>
+        <input type="text" id="playlistUrl" placeholder="Paste playlist URL here" />
+        <button id="analyzeBtn" class="btn-primary">Analyze Playlist</button>
+        <div id="playlistResult"></div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <h2>About MusicVibe</h2>
+        <p>
+          MusicVibe was built to connect your music taste with your personality.
+          Whether you're into Trap, Lo-fi, Pop, or Rock, our tools give you insights and fun analysis.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

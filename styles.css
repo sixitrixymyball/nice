@@ -1,0 +1,310 @@
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html, .container {
+  height: 100%;
+  background: #121212;
+  color: #eee;
+}
+
+/* Container: sidebar + main */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+  border-right: 2px solid #282828;
+}
+
+.logo h1 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: #1DB954; /* Spotify green */
+  user-select: none;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  flex-grow: 1;
+}
+
+.nav-links li {
+  margin-bottom: 1.2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ccc;
+  padding: 0.6rem 1rem;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background: #1DB954;
+  color: #121212;
+}
+
+.nav-link.active {
+  background: #1DB954;
+  color: #121212;
+  font-weight: 800;
+}
+
+.sidebar-footer {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  padding: 2.5rem 3rem;
+  overflow-y: auto;
+  background: #181818;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Section base */
+.section {
+  display: none;
+  max-width: 800px;
+  margin: auto;
+}
+
+.active-section {
+  display: block;
+}
+
+/* HOME */
+.home-content {
+  text-align: center;
+  padding-top: 6rem;
+}
+
+.home-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.home-content h2 span {
+  color: #1DB954;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  background: #1DB954;
+  color: #121212;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(29,185,84,0.5);
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #17a44c;
+}
+
+/* Secondary buttons */
+.btn-secondary {
+  background: #555;
+  color: #eee;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #666;
+}
+
+/* Quiz */
+#quiz-container {
+  margin-top: 1.5rem;
+}
+
+#progress-bar {
+  background: #333;
+  border-radius: 30px;
+  height: 12px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: #1DB954;
+  border-radius: 30px;
+  transition: width 0.3s ease;
+}
+
+#question-container {
+  background: #222;
+  border-radius: 12px;
+  padding: 2rem;
+  font-size: 1.25rem;
+  min-height: 140px;
+  color: #eee;
+}
+
+.quiz-nav-buttons {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+/* Quiz answers */
+.answer-option {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  background: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.answer-option:hover {
+  background: #1DB954;
+  color: #121212;
+}
+
+.answer-option.selected {
+  background: #1DB954;
+  color: #121212;
+  font-weight: 700;
+}
+
+/* Playlist analyzer */
+#playlist input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+#playlistResult {
+  margin-top: 2rem;
+  color: #eee;
+  font-weight: 700;
+  text-align: center;
+}
+
+#playlistResult iframe {
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(29,185,84,0.4);
+}
+
+/* About */
+#about p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #ccc;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Contact form */
+#contactForm {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  resize: vertical;
+  outline: none;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  box-shadow: 0 0 8px #1DB954;
+}
+
+#contactForm button {
+  max-width: 180px;
+  align-self: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 2px solid #282828;
+    overflow-x: auto;
+  }
+  .logo {
+    flex: 0 0 auto;
+    margin-right: 2rem;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    flex-grow: 1;
+  }
+  .nav-links li {
+    margin: 0;
+  }
+  .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .sidebar-footer {
+    display: none;
+  }
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+}
